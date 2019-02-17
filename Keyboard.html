@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Keyboard.css">
+    <script src="PlugBoard.js"></script>
+    <script src="Rotor.js"></script>
+    <script src="Reflector.js"></script>
+    <script src="Enigma.js"></script>
+    <script src="Main.js"></script>
+</head>
+<body>
+    <div class="rotorOut" id="rotorOut" onclick="flipIn('rotor')" style="display: block">
+        <span class="rotorBorder">
+            <div class="rotorVal" id="rotorVal3">A</div>
+        </span>
+        <span class="rotorBorder">
+            <div class="rotorVal" id="rotorVal2">A</div>
+        </span>
+        <span class="rotorBorder">
+            <div class="rotorVal" id="rotorVal1">A</div>
+        </span>
+        <div>Scroll to rotate rotors</div>
+        <div>Click for inside and rotors</div>
+    </div>
+    <div class="rotorIn" id="rotorIn" onClick="flipOut('rotor')"  style="display: none">
+        <span class="refWheel" onclick="swapReflector()">
+            <div class="refVal" id="refVal">B</div>
+        </span>
+        <span class="rotorWheel" onclick="swapRotor(3)">
+            <div class="wheelVal" id="wheelVal3">III</div>
+            <div class="ringVal" id="ringVal3">A</div>
+        </span>
+        <span class="rotorWheel" onclick="swapRotor(2)">
+            <div class="wheelVal" id="wheelVal2">II</div>
+            <div class="ringVal" id="ringVal2">A</div>
+        </span>
+        <span class="rotorWheel" onclick="swapRotor(1)">
+            <div class="wheelVal" id="wheelVal1">I</div>
+            <div class="ringVal" id="ringVal1">A</div>
+        </span>
+        <div>Click to change rotors and reflector</div>
+        <div>Scroll to change rotor ring settings</div>
+    </div>
+    <script>updateVals();scrollEvents();</script>
+    <div class="tape"><div class="tapeText" id="tapeText" onclick="clearTape()"></div></div>
+    <div class="column">
+        <div class="row">
+            <span class="dot" id="key_Q"><div class="key">Q</div></span>
+            <span class="dot" id="key_W"><div class="key">W</div></span>
+            <span class="dot" id="key_E"><div class="key">E</div></span>
+            <span class="dot" id="key_R"><div class="key">R</div></span>
+            <span class="dot" id="key_T"><div class="key">T</div></span>
+            <span class="dot" id="key_Y"><div class="key">Y</div></span>
+            <span class="dot" id="key_U"><div class="key">U</div></span>
+            <span class="dot" id="key_I"><div class="key">I</div></span>
+            <span class="dot" id="key_O"><div class="key">O</div></span>
+            <span class="dot" id="key_P"><div class="key">P</div></span>
+        </div>
+        <div class="row">
+            <span class="dot" id="key_A"><div class="key">A</div></span>
+            <span class="dot" id="key_S"><div class="key">S</div></span>
+            <span class="dot" id="key_D"><div class="key">D</div></span>
+            <span class="dot" id="key_F"><div class="key">F</div></span>
+            <span class="dot" id="key_G"><div class="key">G</div></span>
+            <span class="dot" id="key_H"><div class="key">H</div></span>
+            <span class="dot" id="key_J"><div class="key">J</div></span>
+            <span class="dot" id="key_K"><div class="key">K</div></span>
+            <span class="dot" id="key_L"><div class="key">L</div></span>
+        </div>
+        <div class="row">
+            <span class="dot" id="key_Z"><div class="key">Z</div></span>
+            <span class="dot" id="key_X"><div class="key">X</div></span>
+            <span class="dot" id="key_C"><div class="key">C</div></span>
+            <span class="dot" id="key_V"><div class="key">V</div></span>
+            <span class="dot" id="key_B"><div class="key">B</div></span>
+            <span class="dot" id="key_N"><div class="key">N</div></span>
+            <span class="dot" id="key_M"><div class="key">M</div></span>
+        </div>
+    </div>
+    <div class="plugOut" id="plugOut" onclick="flipIn('plug')" style="display: block">
+        Click for inside of plugboard
+    </div>
+    </div>
+    <div class="plugIn" id="plugIn" onclick="flipOut('plug')" style="display: none">
+        <div class="canvasContainer">
+            <canvas class="plugCanvas" id="plugCanvas" height="134"
+            width="897"></canvas>
+        </div>
+        <div class="plugContainer">
+            <div class="column">
+                <div class="row">
+                    <span class="plug" id="plug_Q"><div class="plugLetter">Q</div></span>
+                    <span class="plug" id="plug_W"><div class="plugLetter">W</div></span>
+                    <span class="plug" id="plug_E"><div class="plugLetter">E</div></span>
+                    <span class="plug" id="plug_R"><div class="plugLetter">R</div></span>
+                    <span class="plug" id="plug_T"><div class="plugLetter">T</div></span>
+                    <span class="plug" id="plug_Y"><div class="plugLetter">Y</div></span>
+                    <span class="plug" id="plug_U"><div class="plugLetter">U</div></span>
+                    <span class="plug" id="plug_I"><div class="plugLetter">I</div></span>
+                    <span class="plug" id="plug_O"><div class="plugLetter">O</div></span>
+                    <span class="plug" id="plug_P"><div class="plugLetter">P</div></span>
+                </div>
+                <div class="row">
+                    <span class="plug" id="plug_A"><div class="plugLetter">A</div></span>
+                    <span class="plug" id="plug_S"><div class="plugLetter">S</div></span>
+                    <span class="plug" id="plug_D"><div class="plugLetter">D</div></span>
+                    <span class="plug" id="plug_F"><div class="plugLetter">F</div></span>
+                    <span class="plug" id="plug_G"><div class="plugLetter">G</div></span>
+                    <span class="plug" id="plug_H"><div class="plugLetter">H</div></span>
+                    <span class="plug" id="plug_J"><div class="plugLetter">J</div></span>
+                    <span class="plug" id="plug_K"><div class="plugLetter">K</div></span>
+                    <span class="plug" id="plug_L"><div class="plugLetter">L</div></span>
+                </div>
+                <div class="row">
+                    <span class="plug" id="plug_Z"><div class="plugLetter">Z</div></span>
+                    <span class="plug" id="plug_X"><div class="plugLetter">X</div></span>
+                    <span class="plug" id="plug_C"><div class="plugLetter">C</div></span>
+                    <span class="plug" id="plug_V"><div class="plugLetter">V</div></span>
+                    <span class="plug" id="plug_B"><div class="plugLetter">B</div></span>
+                    <span class="plug" id="plug_N"><div class="plugLetter">N</div></span>
+                    <span class="plug" id="plug_M"><div class="plugLetter">M</div></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

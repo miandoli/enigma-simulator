@@ -1,0 +1,152 @@
+body {
+    background-color: gray;
+}
+
+.rotorOut, .rotorIn {
+    height: 175px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 15px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #000000;
+}
+
+.rotorVal {
+    height: 50px;
+    width: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.rotorBorder {
+    height: 50px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: inline-block;
+    margin: 25px 25px 10px 25px;
+    padding: 25px 10px 25px 10px;
+}
+
+.rotorWheel, .refWheel {
+    background-color: #000000;
+    display: inline-block;
+    padding: 30px 15px 30px 15px;
+    margin: 15px 20px 0px 20px;
+}
+
+.refWheel {
+    margin-left: -90px;
+}
+
+.refVal {
+    height: 50px;
+    width: 40px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 25px;
+    line-height: 55px;
+    margin: 0px;
+}
+
+.wheelVal {
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0px 0px 5px 0px;
+}
+
+.ringVal {
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0px 0px 0px 2.5px;
+}
+
+.plugOut, .plugIn {
+    height: 200px;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.plugContainer {
+    position: absolute;
+    left: 18%;
+    z-index: 10;
+}
+
+.canvasContainer {
+    position: absolute;
+    left: 21%;
+    top: 76%;
+}
+
+.row {
+    display: block;
+}
+
+.column {
+    text-align: center;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 25px;
+}
+
+.key {
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: #000000;
+}
+
+.plug {
+    height: 35px;
+    width: 35px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 15px 30px 15px 30px;
+}
+
+.plugLetter {
+    line-height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.plugOut {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.tape {
+    display: block;
+    height: 25px;
+    background-color: #ffffff;
+    margin: 5px 2px 5px 2px;
+    overflow: hidden;
+    text-align: right;
+}
+
+.tapeText {
+    line-height: 25px;
+    font-size: 22px;
+}
