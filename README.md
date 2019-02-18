@@ -27,5 +27,15 @@ Replica of the M3 Army and Airforce that the Nazis used in WWII. The simulator t
 4. Reflectors can be swapped by clicking on it
 5. By opening the front compartment, plugs can be connected on the plugboard
 
+## Pictures
+### Default view
+![Screenshot 1](Screenshots/Screenshot_1.png)
+### Plugboard
+![Screenshot 2](Screenshots/Screenshot_2.png)
+### Inside rotor compartment
+![Screenshot 3](Screenshots/Screenshot_3.png)
+### Lampboard
+![Screenshot 4](Screenshots/Screenshot_4.png)
+
 ## Note:
 This web-app was created to be used as a simulator and pair with the Bombe I'm going to create. This means I did not design the HTML/graphics for all screens/web deployment. The machine should work on all browsers and screen sizes but some graphics (specifically plugboard lines) might appear slightly off.
